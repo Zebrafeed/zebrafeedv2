@@ -45,6 +45,10 @@ body{
 	color: #ccc;
 }
 
+#mobileNav{
+	display: none;
+}
+
 #content{
 	background-color: rgba(255,255,255,0.8);
 	width: 35%;
@@ -55,6 +59,9 @@ body{
 	display: none;
 }
 
+#mobileContent{
+	display: none;
+}
 
 .whiteText{
 	color: #ccc;
@@ -66,11 +73,40 @@ body{
 .bc{
 	display: none;
 }
+.padded{
+	padding:5px;
+}
 
 
 /* MOBILE PAGE */
-@media (max-width: 1400px){
+@media (max-width: 1200px){
 	#content{
 		display: none;
+	}
+	#nav{
+		height:60px;
+		width: 100%;
+		background-color: rgba(100,100,100,0.8);
+		border: 1px #ccc solid;
+		border-left: 0px;
+		border-right: 0px;
+		position: absolute;
+	}
+	#navMenu{
+		display: none;
+	}
+	
+	#mobileNav{
+		display: inline-block;
+		position: absolute;
+		right: 20px;
+		margin-top: 20px;
+	}
+
+	#mobileContent{
+		display: block;
+		position: relative;
+		top: 400px;
+		background-color: rgba(230,230,230,0.9);
 	}
 }
