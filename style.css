@@ -79,7 +79,7 @@ body{
 
 
 /* MOBILE PAGE */
-@media (max-width: 1200px){
+@media (max-width: 800px){
 	#content{
 		display: none;
 	}
@@ -96,12 +96,6 @@ body{
 		display: none;
 	}
 	
-	#mobileNav{
-		display: inline-block;
-		position: absolute;
-		right: 20px;
-		margin-top: 20px;
-	}
 
 	#mobileContent{
 		display: block;
