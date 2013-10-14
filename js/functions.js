@@ -9,7 +9,10 @@ $(document).ready(function(){
 	
 	if($(window).width() > 800){
 		content.load(pages[0].data, function(){
-			content.fadeIn(500);
+			content.show();
+			content.animate({
+				'right': '0px'
+			}, 500);
 		});
 	}else{
 		content.hide();
