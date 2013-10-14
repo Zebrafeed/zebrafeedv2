@@ -6,14 +6,27 @@ $(document).ready(function(){
 	content = $('#content');
 	bgImg = $('#bgImg');
 	pages = [{img: 'img/bg0.jpg', data: 'data.html #home'}, {img: 'img/bg1.jpg', data: 'data.html #portfolio'}, {img: 'img/bg2.jpg', data: 'data.html #pricing'}, {img: 'img/bg3.jpg', data: 'data.html #contact'}];
-	
+
 	if($(window).width() > 800){
-		content.load(pages[0].data, function(){
-			content.show();
-			content.animate({
-				'right': '0px'
-			}, 500);
-		});
+		
+		newPage = window.location.href.split('#')[1];
+		switch(newPage){
+			case "home":
+				changeBg(0);
+				break;
+			case "portfolio":
+				changeBg(1);
+				break;
+			case "pricing":
+				changeBg(2);
+				break;
+			case "contact":
+				changeBg(3);
+				break;
+			default:
+				changeBg(0);
+		}
+
 	}else{
 		content.hide();
 		$('#nav').css('margin-top', 0);
