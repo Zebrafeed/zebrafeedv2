@@ -1,9 +1,15 @@
+/*
 body{
 	background: url("img/bg0.jpg") no-repeat center center fixed;
 	-webkit-background-size: cover;
 	-moz-background-size: cover;
 	-o-background-size: cover;
 	background-size: cover;
+}
+*/
+
+html{
+	overflow: hidden;
 }
 
 #wrapper{
@@ -18,7 +24,8 @@ body{
 	border: 1px #ccc solid;
 	border-left: 0px;
 	border-right: 0px;
-	position: absolute;
+	position: fixed;
+	bottom: 10px;
 }
 #nav h1{
 	margin-left: 20px;
@@ -50,17 +57,40 @@ body{
 }
 
 #content{
-	background-color: rgba(255,255,255,0.8);
-	width: 35%;
-	position:absolute;
+	background-color: rgba(255,255,255,0.9);
+	width: 50%;
+	position:fixed;
 	right: 0px;
-	top: 200px;
+	top: 20%;
 	padding:5px;
 	display: none;
 }
 
 #mobileContent{
 	display: none;
+}
+
+#bg {
+	background: url("img/bg0.jpg") no-repeat center center fixed;
+	background-size: cover;
+	margin: 0;
+	padding: 0;
+	z-index: -1;
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+}
+#bg2 {
+	background: url("img/bg0.jpg") no-repeat center center fixed;
+	background-size: cover;
+	margin: 0;
+	padding: 0;
+	z-index: -2;
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
 }
 
 .whiteText{
@@ -80,6 +110,10 @@ body{
 
 /* MOBILE PAGE */
 @media (max-width: 800px){
+	html{
+		overflow: visible;
+	}
+
 	#content{
 		display: none;
 	}
@@ -90,7 +124,8 @@ body{
 		border: 1px #ccc solid;
 		border-left: 0px;
 		border-right: 0px;
-		position: absolute;
+		position: fixed;
+		top:5px;
 	}
 	#navMenu{
 		display: none;
